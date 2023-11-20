@@ -15,3 +15,7 @@ func _process(delta):
 		if input_vector.x != 0:
 			sprite_2d.scale.x = sign(input_vector.x)
 		
+
+
+func _on_area_entered(area):
+	area.queue_free()
