@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmri1x6lbj1y0"]
+
+[ext_resource type="Texture2D" uid="uid://cwv37jk3cg6jt" path="res://pig.png" id="1_54t1l"]
+
+[node name="Piggy" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_54t1l")
+hframes = 3
