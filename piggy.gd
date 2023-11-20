@@ -12,7 +12,6 @@ func _process(delta):
 		animation_player.play("idle")
 	else:
 		animation_player.play("run")
-		if input_vector.x > 0:
-			sprite_2d.scale.x = 1
-		else:
-			sprite_2d.scale.x = -1
+		if input_vector.x != 0:
+			sprite_2d.scale.x = sign(input_vector.x)
+		
