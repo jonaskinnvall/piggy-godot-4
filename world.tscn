@@ -1,12 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://b0nku773gpf7l"]
+[gd_scene load_steps=5 format=3 uid="uid://b0nku773gpf7l"]
 
 [ext_resource type="PackedScene" uid="uid://bmri1x6lbj1y0" path="res://piggy.tscn" id="1_ykud3"]
 [ext_resource type="PackedScene" uid="uid://dcgu1n0tm2rrc" path="res://apple.tscn" id="2_ckkcb"]
+[ext_resource type="Texture2D" uid="uid://cwv37jk3cg6jt" path="res://pig.png" id="3_b4417"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nm05r"]
+radius = 8.0
+height = 22.0
 
 [node name="World" type="Node2D"]
 
 [node name="Piggy" parent="." instance=ExtResource("1_ykud3")]
 position = Vector2(140, 65)
+collision_mask = 2
 
 [node name="Apple" parent="." instance=ExtResource("2_ckkcb")]
 position = Vector2(30, 63)
@@ -25,3 +31,16 @@ position = Vector2(98, 34)
 
 [node name="Apple6" parent="." instance=ExtResource("2_ckkcb")]
 position = Vector2(262, 88)
+
+[node name="NPC Piggy" type="Area2D" parent="."]
+position = Vector2(211, 101)
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="NPC Piggy"]
+texture = ExtResource("3_b4417")
+hframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC Piggy"]
+position = Vector2(0, 3)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_nm05r")
