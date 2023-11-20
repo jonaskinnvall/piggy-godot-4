@@ -2,6 +2,7 @@ extends Area2D
 
 var speed = 70
 @onready var animation_player = $AnimationPlayer
+@onready var sprite_2d = $Sprite2D
 
 func _process(delta):
 	var input_vector = Input.get_vector("move_left","move_right","move_up","move_down")
@@ -11,3 +12,7 @@ func _process(delta):
 		animation_player.play("idle")
 	else:
 		animation_player.play("run")
+		if input_vector.x > 0:
+			sprite_2d.scale.x = 1
+		else:
+			sprite_2d.scale.x = -1
