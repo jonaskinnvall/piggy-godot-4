@@ -1,8 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://b0nku773gpf7l"]
+[gd_scene load_steps=3 format=3 uid="uid://b0nku773gpf7l"]
 
 [ext_resource type="PackedScene" uid="uid://bmri1x6lbj1y0" path="res://piggy.tscn" id="1_ykud3"]
+[ext_resource type="PackedScene" uid="uid://dcgu1n0tm2rrc" path="res://apple.tscn" id="2_ckkcb"]
 
 [node name="World" type="Node2D"]
 
 [node name="Piggy" parent="." instance=ExtResource("1_ykud3")]
 position = Vector2(140, 65)
+
+[node name="Apple" parent="." instance=ExtResource("2_ckkcb")]
+position = Vector2(30, 63)
+
+[node name="Apple2" parent="." instance=ExtResource("2_ckkcb")]
+position = Vector2(33, 126)
+
+[node name="Apple3" parent="." instance=ExtResource("2_ckkcb")]
+position = Vector2(178, 139)
+
+[node name="Apple4" parent="." instance=ExtResource("2_ckkcb")]
+position = Vector2(276, 20)
+
+[node name="Apple5" parent="." instance=ExtResource("2_ckkcb")]
+position = Vector2(98, 34)
+
+[node name="Apple6" parent="." instance=ExtResource("2_ckkcb")]
+position = Vector2(262, 88)
